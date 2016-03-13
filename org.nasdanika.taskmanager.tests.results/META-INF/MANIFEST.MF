@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Task Manager Test Results
+Bundle-SymbolicName: org.nasdanika.taskmanager.tests.results;singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Require-Bundle: org.nasdanika.webtest.model;bundle-version="0.1.0"

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	
+	   <feature url="features/org.nasdanika.webtest.report.feature_0.1.0.qualifier.jar" id="org.nasdanika.webtest.report.feature" version="0.1.0.qualifier">
+	      <category name="org.nasdanika.webtest.report.category"/>
+	   </feature>
+   <category-def name="org.nasdanika.webtest.report.category" label="WebTest Report Server">
+      <description>
+         org.nasdanika.webtest.report.
+      </description>
+   </category-def>
+</site>

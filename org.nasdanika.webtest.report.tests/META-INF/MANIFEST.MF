@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.nasdanika.webtest.report.tests
+Bundle-SymbolicName: org.nasdanika.webtest.report.tests; singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Fragment-Host: org.nasdanika.webtest.report.ui.driver.actors.impl;bundle-version="0.1.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: org.nasdanika.webtest.report.ui.driver.actors.impl,
+ org.nasdanika.webtest.report.ui.driver.actors,
+ org.nasdanika.webtest.report.ui.driver.pages.impl,
+ org.eclipse.equinox.app;bundle-version="1.3.300"

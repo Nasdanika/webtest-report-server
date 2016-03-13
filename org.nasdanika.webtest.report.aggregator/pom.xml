@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.nasdanika.webtest.report</groupId>
+	<artifactId>org.nasdanika.webtest.report.aggregator</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+	<name>Aggregator</name>
+	<packaging>pom</packaging>
+	<modules>
+	
+		<module>../org.nasdanika.webtest.report.feature</module>
+	
+		<module>../org.nasdanika.webtest.report.repository</module>
+	
+		<module>../org.nasdanika.webtest.report.ui.driver.actors</module>
+	
+		<module>../org.nasdanika.webtest.report.ui.driver.pages</module>
+	
+		<module>../org.nasdanika.webtest.report.ui.driver.actors.impl</module>
+	
+		<module>../org.nasdanika.webtest.report.ui.driver.pages.impl</module>
+	
+		<module>../org.nasdanika.webtest.report</module>
+	
+		<module>../org.nasdanika.webtest.report.tests</module>
+	
+		<module>../org.nasdanika.webtest.report.tests.feature</module>
+
+		<module>../org.nasdanika.taskmanager.tests.results</module>
+	
+	</modules>
+</project>

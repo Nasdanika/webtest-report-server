@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.equinox.http.registry.servlets">
+   
+   	
+      <servlet
+            alias="/router"
+            class="org.nasdanika.web.RoutingServlet" httpcontextId="org.nasdanika.webtest.report">
+         <init-param
+               name="json-pretty-print"
+               value="true">
+         </init-param>
+         <init-param
+               name="default-access-decision"
+               value="allow">
+         </init-param>
+         <init-param
+               name="ws-session-path"
+               value="null">
+         </init-param>
+      </servlet>
+      <!-- NTLM Authentication 
+      <servlet
+            alias="/ntlm/router"
+            class="org.nasdanika.cdo.web.CDOTransactionRoutingServlet" httpcontextId="org.nasdanika.webtest.report">
+         <init-param
+               name="json-pretty-print"
+               value="true">
+         </init-param>
+         <init-param
+               name="default-access-decision"
+               value="allow">
+         </init-param>
+         <init-param
+               name="ws-session-path"
+               value="/ntlmnull">
+         </init-param>
+      </servlet>
+	   	   
+      -->
+   	   
+   </extension>
+   
+	
+   <extension point="org.nasdanika.web.route">
+      <root-route
+            class="org.nasdanika.webtest.report.WebTestReportServerRoute"
+            method="GET"
+            path="webtest-report-server.html">
+      </root-route>
+      <root-route
+            class="org.nasdanika.webtest.model.routes.ResultsRoute"
+            method="GET"
+            path="results/">
+      </root-route>
+      <eobject-route
+            class="org.nasdanika.webtest.model.routes.TestSessionRoute"
+            method="GET"
+            path="/"
+            target="TestSession"
+            target-namespace-uri="urn:org.nasdanika.webtest.model">
+      </eobject-route>
+      
+      
+      <!--
+      <object_route
+            class="org.nasdanika.web.routes.ServiceRoute"
+            method="*"
+            pattern="[^/]+/services/.+"
+            target="org.eclipse.emf.cdo.view.CDOView">
+         <property
+               name="offset"
+               value="2">
+         </property>
+      </object_route>
+      -->
+   </extension>
+   
+      
+   <extension point="org.nasdanika.cdo.security.security_policy">
+      <policy_resource
+            resource="webtest-report-server.nasdanika_cdo_security">
+      </policy_resource>
+   </extension> 
+   <extension
+         point="org.eclipse.equinox.http.registry.httpcontexts">
+      <httpcontext
+            id="org.nasdanika.webtest.report">
+      </httpcontext>
+   </extension>   
+</plugin>

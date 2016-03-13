@@ -1,0 +1,118 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>org.nasdanika.webtest.report.tests</artifactId>
+	<packaging>eclipse-test-plugin</packaging>
+	<parent>
+		<groupId>org.nasdanika.webtest.report</groupId>
+		<artifactId>org.nasdanika.webtest.report.parent</artifactId>
+		<version>0.1.0-SNAPSHOT</version>
+		<relativePath>../org.nasdanika.webtest.report.parent</relativePath>
+	</parent>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<dependencies>	
+					
+					
+					
+						<dependency>
+							<type>eclipse-feature</type>
+							<artifactId>org.nasdanika.equinox.feature</artifactId>
+							<version>0.0.0</version>
+						</dependency>						
+					
+					
+					
+						<dependency>
+							<type>eclipse-feature</type>
+							<artifactId>org.nasdanika.feature</artifactId>
+							<version>0.0.0</version>
+						</dependency>						
+					
+					
+					
+						<dependency>
+							<type>eclipse-feature</type>
+							<artifactId>org.nasdanika.server.jetty.feature</artifactId>
+							<version>0.0.0</version>
+						</dependency>						
+					
+					
+					
+						<dependency>
+							<type>eclipse-feature</type>
+							<artifactId>org.nasdanika.webtest.feature</artifactId>
+							<version>0.0.0</version>
+						</dependency>						
+					
+							
+																									
+						<dependency>
+							<type>eclipse-plugin</type>
+							<artifactId>org.nasdanika.webtest.report.ui.driver.pages.impl</artifactId>
+						</dependency>						
+										
+					
+										
+						<dependency>
+							<type>eclipse-plugin</type>
+							<artifactId>org.nasdanika.webtest.report.ui.driver.actors.impl</artifactId>
+						</dependency>						
+					
+					</dependencies>
+					<bundleStartLevel>
+						<bundle>
+							<id>org.eclipse.core.runtime</id>
+							<level>4</level>
+							<autoStart>true</autoStart>
+						</bundle>
+						<bundle>
+							<id>org.eclipse.equinox.common</id>
+							<level>2</level>
+							<autoStart>true</autoStart>
+						</bundle>
+						<bundle>
+							<id>org.eclipse.equinox.ds</id>
+							<level>1</level>
+							<autoStart>true</autoStart>
+						</bundle>
+						<bundle>
+							<id>org.eclipse.equinox.http.jetty</id>
+							<level>4</level>
+							<autoStart>true</autoStart>
+						</bundle>
+						<bundle>
+							<id>org.eclipse.equinox.http.registry</id>
+							<level>4</level>
+							<autoStart>true</autoStart>
+						</bundle>
+						<bundle>
+							<id>org.nasdanika.webtest.report.ui.driver.pages.impl</id>
+							<level>3</level>
+							<autoStart>true</autoStart>
+						</bundle>
+						<bundle>
+							<id>org.nasdanika.webtest.report.ui.driver.actors.impl</id>
+							<level>3</level>
+							<autoStart>true</autoStart>
+						</bundle>
+						<bundle>
+							<id>org.nasdanika.webtest.report</id>
+							<level>4</level>
+							<autoStart>true</autoStart>
+						</bundle>
+					</bundleStartLevel>
+                    <includes>
+	                    <include>**/WebTestReportServerTests.java</include>
+                    </includes>
+					<argLine>-Xmx512m -Dorg.osgi.service.http.port=8080 -Dorg.eclipse.equinox.http.jetty.context.path=/webtest-report-server</argLine>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

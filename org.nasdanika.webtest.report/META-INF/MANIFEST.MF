@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.nasdanika.webtest.report
+Bundle-SymbolicName: org.nasdanika.webtest.report; singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: org.nasdanika.cdo.web,
+ org.eclipse.equinox.http.registry,
+ org.nasdanika.webtest.model.routes;bundle-version="0.1.0"

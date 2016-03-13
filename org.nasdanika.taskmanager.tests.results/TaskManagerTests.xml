@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.nasdanika.webtest.model:TestSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.nasdanika.webtest.model="urn:org.nasdanika.webtest.model" node="MyNode">
+  <testResults xsi:type="org.nasdanika.webtest.model:TestClassResult" qualifiedName="org.nasdanika.taskmanager.tests.TaskManagerTest" title="Task manager test">
+    <description contentType="text">
+      <value>Tests of Task Manager UI Tests</value>
+    </description>
+    <pageResults qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.TaskManagerHomePage" title="Task Manager Home Page">
+      <description contentType="text">
+        <value>Page class for testing Task Manager</value>
+      </description>
+      <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl.newTaskButton" title="New task button">
+        <locators how="CSS" using="#content-panel > button"/>
+      </webElements>
+      <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl.taskTableBody" title="Task table body">
+        <locators how="CSS" using="#content-panel > table > tbody"/>
+      </webElements>
+      <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl.themeDropDown" title="Theme drop down">
+        <locators how="CSS" using="body > div > div.panel-heading > h3 > div > span > ul"/>
+      </webElements>
+      <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl.themeToggle" title="Theme toggle">
+        <locators how="CSS" using="body > div > div.panel-heading > h3 > div > span > span"/>
+      </webElements>
+    </pageResults>
+    <pageResults qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.TaskEditDialog" title="Task edit dialog">
+      <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskEditDialogImpl.cancel" title="Cancel">
+        <locators how="CSS" using="#task-modal > div > div > div.modal-footer > button:nth-child(2)"/>
+      </webElements>
+      <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskEditDialogImpl.description" title="Description">
+        <locators how="CSS" using="#task-modal > div > div > div.modal-body > form > div:nth-child(1) > textarea"/>
+      </webElements>
+      <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskEditDialogImpl.status" title="Status">
+        <locators how="CSS" using="#task-modal > div > div > div.modal-body > form > div:nth-child(2) > select"/>
+      </webElements>
+      <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskEditDialogImpl.submit" title="Submit">
+        <locators how="CSS" using="#task-modal > div > div > div.modal-footer > button:nth-child(1)"/>
+      </webElements>
+    </pageResults>
+    <actorResults qualifiedName="org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor" title="Task manager actor">
+      <description contentType="text">
+        <value>Task Manager UI Tests Actor</value>
+      </description>
+      <coverage qualifiedName="public abstract int org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.createTask(java.lang.String,org.nasdanika.taskmanager.ui.driver.pages.TaskStatus)" title="Create task" invocations="1"/>
+      <coverage qualifiedName="public abstract void org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.deleteTask(int)" title="Delete task" invocations="1"/>
+      <coverage qualifiedName="public abstract void org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.setTheme(org.nasdanika.taskmanager.ui.driver.pages.Theme)" title="Set theme" invocations="2"/>
+      <coverage qualifiedName="public abstract void org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.setTaskStatus(int,org.nasdanika.taskmanager.ui.driver.pages.TaskStatus)" title="Set task status" invocations="1"/>
+      <coverage qualifiedName="public abstract void org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.updateTask(int,java.lang.String,org.nasdanika.taskmanager.ui.driver.pages.TaskStatus)" title="Update task" invocations="1"/>
+    </actorResults>
+    <methodResults qualifiedName="public void org.nasdanika.taskmanager.tests.TaskManagerTest.testCreateTask() throws java.lang.Exception" title="Test create task" operationName="testCreateTask" start="1457664621643" finish="1457664639802">
+      <screenshots type="AFTER" screenshot="//@screenshots.0"/>
+      <children xsi:type="org.nasdanika.webtest.model:InitializationResult" qualifiedName="class org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl" title="Task manager home page impl :: init" operationName="TaskManagerHomePageImpl::init" start="1457664629628" finish="1457664630043" pageResult="//@pageResults.0">
+        <screenshots screenshot="//@screenshots.1"/>
+        <screenshots type="AFTER" screenshot="//@screenshots.1"/>
+      </children>
+      <children xsi:type="org.nasdanika.webtest.model:ActorMethodResult" qualifiedName="public abstract int org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.createTask(java.lang.String,org.nasdanika.taskmanager.ui.driver.pages.TaskStatus)" title="Create task" operationName="createTask" start="1457664630450" finish="1457664637548" instanceAlias="T0" actorResult="//@actorResults.0">
+        <screenshots screenshot="//@screenshots.1"/>
+        <screenshots type="AFTER" screenshot="//@screenshots.0"/>
+        <children xsi:type="org.nasdanika.webtest.model:PageMethodResult" qualifiedName="public abstract org.nasdanika.taskmanager.ui.driver.pages.TaskEditDialog org.nasdanika.taskmanager.ui.driver.pages.TaskManagerHomePage.newTask()" title="New task" operationName="newTask" start="1457664630857" finish="1457664632709" instanceAlias="Home Page" pageResult="//@pageResults.0">
+          <screenshots screenshot="//@screenshots.1"/>
+          <screenshots type="AFTER" screenshot="//@screenshots.2"/>
+          <children xsi:type="org.nasdanika.webtest.model:InitializationResult" qualifiedName="class org.nasdanika.taskmanager.ui.driver.pages.impl.TaskEditDialogImpl" title="Task edit dialog impl :: init" operationName="TaskEditDialogImpl::init" start="1457664631916" finish="1457664632313" pageResult="//@pageResults.1">
+            <screenshots screenshot="//@screenshots.2"/>
+            <screenshots type="AFTER" screenshot="//@screenshots.2"/>
+          </children>
+          <arguments value="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskEditDialogImpl@34237b90" type="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskEditDialogImpl"/>
+        </children>
+        <children xsi:type="org.nasdanika.webtest.model:PageMethodResult" qualifiedName="public abstract void org.nasdanika.taskmanager.ui.driver.pages.TaskEditDialog.setDescription(java.lang.String)" title="Set description" operationName="setDescription" start="1457664633088" finish="1457664633613" instanceAlias="New Task Dialog" pageResult="//@pageResults.1">
+          <screenshots screenshot="//@screenshots.2"/>
+          <screenshots type="AFTER" screenshot="//@screenshots.3"/>
+          <arguments value="Some rather important task!" type="java.lang.String"/>
+        </children>
+        <children xsi:type="org.nasdanika.webtest.model:PageMethodResult" qualifiedName="public abstract void org.nasdanika.taskmanager.ui.driver.pages.TaskEditDialog.setStatus(org.nasdanika.taskmanager.ui.driver.pages.TaskStatus)" title="Set status" operationName="setStatus" start="1457664634053" finish="1457664634596" instanceAlias="New Task Dialog" pageResult="//@pageResults.1">
+          <screenshots screenshot="//@screenshots.4"/>
+          <screenshots type="AFTER" screenshot="//@screenshots.5"/>
+          <arguments value="IN_PROGRESS" type="org.nasdanika.taskmanager.ui.driver.pages.TaskStatus"/>
+        </children>
+        <children xsi:type="org.nasdanika.webtest.model:PageMethodResult" qualifiedName="public abstract org.nasdanika.taskmanager.ui.driver.pages.TaskManagerHomePage org.nasdanika.taskmanager.ui.driver.pages.TaskEditDialog.submit()" title="Submit" operationName="submit" start="1457664634989" finish="1457664636297" instanceAlias="New Task Dialog" pageResult="//@pageResults.1">
+          <screenshots screenshot="//@screenshots.5"/>
+          <screenshots type="AFTER" screenshot="//@screenshots.0"/>
+          <children xsi:type="org.nasdanika.webtest.model:InitializationResult" qualifiedName="class org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl" title="Task manager home page impl :: init" operationName="TaskManagerHomePageImpl::init" start="1457664635515" finish="1457664635909" pageResult="//@pageResults.0">
+            <screenshots screenshot="//@screenshots.6"/>
+            <screenshots type="AFTER" screenshot="//@screenshots.7"/>
+          </children>
+          <arguments value="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl@69b2f8e5" type="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl"/>
+        </children>
+        <children xsi:type="org.nasdanika.webtest.model:PageMethodResult" qualifiedName="public abstract java.util.List org.nasdanika.taskmanager.ui.driver.pages.TaskManagerHomePage.getTaskRows()" title="Get task rows" operationName="getTaskRows" start="1457664636698" finish="1457664637145" instanceAlias="Home Page" pageResult="//@pageResults.0">
+          <screenshots screenshot="//@screenshots.0"/>
+          <screenshots type="AFTER" screenshot="//@screenshots.0"/>
+          <arguments value="[org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@418c020b, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@51351f28, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@21618fa7, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@15f2eda3, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@34cf294c, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@4d7aaca2, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@604b1e1d, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@62566842]" type="java.util.ArrayList"/>
+        </children>
+        <arguments value="Some rather important task!" type="java.lang.String"/>
+        <arguments value="IN_PROGRESS" type="org.nasdanika.taskmanager.ui.driver.pages.TaskStatus"/>
+        <arguments value="7" type="java.lang.Integer"/>
+      </children>
+    </methodResults>
+    <methodResults qualifiedName="public void org.nasdanika.taskmanager.tests.TaskManagerTest.testDeleteTask() throws java.lang.Exception" title="Test delete task" operationName="testDeleteTask" start="1457664639804" finish="1457664651675">
+      <screenshots type="AFTER" screenshot="//@screenshots.8"/>
+      <children xsi:type="org.nasdanika.webtest.model:InitializationResult" qualifiedName="class org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl" title="Task manager home page impl :: init" operationName="TaskManagerHomePageImpl::init" start="1457664646413" finish="1457664646816" pageResult="//@pageResults.0">
+        <screenshots screenshot="//@screenshots.9"/>
+        <screenshots type="AFTER" screenshot="//@screenshots.9"/>
+      </children>
+      <children xsi:type="org.nasdanika.webtest.model:ActorMethodResult" qualifiedName="public abstract void org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.deleteTask(int)" title="Delete task" operationName="deleteTask" start="1457664647214" finish="1457664649854" instanceAlias="T1" actorResult="//@actorResults.0">
+        <screenshots screenshot="//@screenshots.9"/>
+        <screenshots type="AFTER" screenshot="//@screenshots.8"/>
+        <children xsi:type="org.nasdanika.webtest.model:PageMethodResult" qualifiedName="public abstract java.util.List org.nasdanika.taskmanager.ui.driver.pages.TaskManagerHomePage.getTaskRows()" title="Get task rows" operationName="getTaskRows" start="1457664647608" finish="1457664648043" instanceAlias="Home Page" pageResult="//@pageResults.0">
+          <screenshots screenshot="//@screenshots.9"/>
+          <screenshots type="AFTER" screenshot="//@screenshots.9"/>
+          <arguments value="[org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@26a262d6, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@11bd803, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@58f07f02, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@75798d03, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@40f8f5a8, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@1ffcf674, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@442f92e6]" type="java.util.ArrayList"/>
+        </children>
+        <children xsi:type="org.nasdanika.webtest.model:InitializationResult" qualifiedName="class org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl" title="Task manager home page impl :: init" operationName="TaskManagerHomePageImpl::init" start="1457664649093" finish="1457664649485" pageResult="//@pageResults.0">
+          <screenshots screenshot="//@screenshots.10"/>
+          <screenshots type="AFTER" screenshot="//@screenshots.11"/>
+        </children>
+        <arguments value="3" type="java.lang.Integer"/>
+      </children>
+    </methodResults>
+    <methodResults qualifiedName="public void org.nasdanika.taskmanager.tests.TaskManagerTest.testEditTask() throws java.lang.Exception" title="Test edit task" operationName="testEditTask" start="1457664651676" finish="1457664665845">
+      <screenshots type="AFTER" screenshot="//@screenshots.12"/>
+      <children xsi:type="org.nasdanika.webtest.model:InitializationResult" qualifiedName="class org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl" title="Task manager home page impl :: init" operationName="TaskManagerHomePageImpl::init" start="1457664659121" finish="1457664659525" pageResult="//@pageResults.0">
+        <screenshots screenshot="//@screenshots.13"/>
+        <screenshots type="AFTER" screenshot="//@screenshots.13"/>
+      </children>
+      <children xsi:type="org.nasdanika.webtest.model:ActorMethodResult" qualifiedName="public abstract void org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.updateTask(int,java.lang.String,org.nasdanika.taskmanager.ui.driver.pages.TaskStatus)" title="Update task" operationName="updateTask" start="1457664659925" finish="1457664663777" instanceAlias="T2" actorResult="//@actorResults.0">
+        <screenshots screenshot="//@screenshots.13"/>
+        <screenshots type="AFTER" screenshot="//@screenshots.12"/>
+        <children xsi:type="org.nasdanika.webtest.model:PageMethodResult" qualifiedName="public abstract java.util.List org.nasdanika.taskmanager.ui.driver.pages.TaskManagerHomePage.getTaskRows()" title="Get task rows" operationName="getTaskRows" start="1457664660304" finish="1457664660746" instanceAlias="Home Page" pageResult="//@pageResults.0">
+          <screenshots screenshot="//@screenshots.13"/>
+          <screenshots type="AFTER" screenshot="//@screenshots.13"/>
+          <arguments value="[org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@1431267b, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@342726f1, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@c808207, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@77134e08, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@6a0cbc6f, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@67110f71, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@6f89292e]" type="java.util.ArrayList"/>
+        </children>
+        <children xsi:type="org.nasdanika.webtest.model:InitializationResult" qualifiedName="class org.nasdanika.taskmanager.ui.driver.pages.impl.TaskEditDialogImpl" title="Task edit dialog impl :: init" operationName="TaskEditDialogImpl::init" start="1457664661762" finish="1457664662166" pageResult="//@pageResults.1">
+          <screenshots screenshot="//@screenshots.14"/>
+          <screenshots type="AFTER" screenshot="//@screenshots.14"/>
+        </children>
+        <children xsi:type="org.nasdanika.webtest.model:InitializationResult" qualifiedName="class org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl" title="Task manager home page impl :: init" operationName="TaskManagerHomePageImpl::init" start="1457664663007" finish="1457664663390" pageResult="//@pageResults.0">
+          <screenshots screenshot="//@screenshots.15"/>
+          <screenshots type="AFTER" screenshot="//@screenshots.16"/>
+        </children>
+        <arguments value="4" type="java.lang.Integer"/>
+        <arguments value="New description" type="java.lang.String"/>
+        <arguments value="IN_PROGRESS" type="org.nasdanika.taskmanager.ui.driver.pages.TaskStatus"/>
+      </children>
+    </methodResults>
+    <methodResults qualifiedName="public void org.nasdanika.taskmanager.tests.TaskManagerTest.testSetTaskStatus() throws java.lang.Exception" title="Test set task status" operationName="testSetTaskStatus" start="1457664665846" finish="1457664680923">
+      <screenshots type="AFTER" screenshot="//@screenshots.17"/>
+      <children xsi:type="org.nasdanika.webtest.model:InitializationResult" qualifiedName="class org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl" title="Task manager home page impl :: init" operationName="TaskManagerHomePageImpl::init" start="1457664676022" finish="1457664676424" pageResult="//@pageResults.0">
+        <screenshots screenshot="//@screenshots.18"/>
+        <screenshots type="AFTER" screenshot="//@screenshots.18"/>
+      </children>
+      <children xsi:type="org.nasdanika.webtest.model:ActorMethodResult" qualifiedName="public abstract void org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.setTaskStatus(int,org.nasdanika.taskmanager.ui.driver.pages.TaskStatus)" title="Set task status" operationName="setTaskStatus" start="1457664676823" finish="1457664679160" instanceAlias="T3" actorResult="//@actorResults.0">
+        <screenshots screenshot="//@screenshots.18"/>
+        <screenshots type="DURING" comment="Status drop-down" screenshot="//@screenshots.19"/>
+        <screenshots type="AFTER" screenshot="//@screenshots.17"/>
+        <children xsi:type="org.nasdanika.webtest.model:PageMethodResult" qualifiedName="public abstract java.util.List org.nasdanika.taskmanager.ui.driver.pages.TaskManagerHomePage.getTaskRows()" title="Get task rows" operationName="getTaskRows" start="1457664677217" finish="1457664677655" instanceAlias="Home Page" pageResult="//@pageResults.0">
+          <screenshots screenshot="//@screenshots.18"/>
+          <screenshots type="AFTER" screenshot="//@screenshots.18"/>
+          <arguments value="[org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@4df39a88, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@2264e43c, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@3bec2275, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@31da3d60, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@60acd609, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@65ec8b24, org.nasdanika.taskmanager.ui.driver.pages.impl.TaskRowImpl@3f49e266]" type="java.util.ArrayList"/>
+        </children>
+        <children xsi:type="org.nasdanika.webtest.model:InitializationResult" qualifiedName="class org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl" title="Task manager home page impl :: init" operationName="TaskManagerHomePageImpl::init" start="1457664678384" finish="1457664678778" pageResult="//@pageResults.0">
+          <screenshots screenshot="//@screenshots.20"/>
+          <screenshots type="AFTER" screenshot="//@screenshots.21"/>
+        </children>
+        <arguments value="2" type="java.lang.Integer"/>
+        <arguments value="COMPLETED" type="org.nasdanika.taskmanager.ui.driver.pages.TaskStatus"/>
+      </children>
+    </methodResults>
+    <methodResults qualifiedName="public void org.nasdanika.taskmanager.tests.TaskManagerTest.testSetTheme() throws java.lang.Exception" title="Test set theme" operationName="testSetTheme" start="1457664680924" finish="1457664696821">
+      <description contentType="text">
+        <value>Sets task manager theme</value>
+      </description>
+      <screenshots type="AFTER" screenshot="//@screenshots.22"/>
+      <children xsi:type="org.nasdanika.webtest.model:InitializationResult" qualifiedName="class org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl" title="Task manager home page impl :: init" operationName="TaskManagerHomePageImpl::init" start="1457664687372" finish="1457664687792" pageResult="//@pageResults.0">
+        <screenshots screenshot="//@screenshots.23"/>
+        <screenshots type="AFTER" screenshot="//@screenshots.24"/>
+      </children>
+      <children xsi:type="org.nasdanika.webtest.model:ActorMethodResult" qualifiedName="public abstract void org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.setTheme(org.nasdanika.taskmanager.ui.driver.pages.Theme)" title="Set theme" operationName="setTheme" start="1457664688197" finish="1457664692133" instanceAlias="T4" actorResult="//@actorResults.0">
+        <screenshots screenshot="//@screenshots.24"/>
+        <screenshots type="AFTER" screenshot="//@screenshots.25"/>
+        <children xsi:type="org.nasdanika.webtest.model:PageMethodResult" qualifiedName="public abstract org.nasdanika.taskmanager.ui.driver.pages.TaskManagerHomePage org.nasdanika.taskmanager.ui.driver.pages.TaskManagerHomePage.setTheme(org.nasdanika.taskmanager.ui.driver.pages.Theme)" title="Set theme" operationName="setTheme" start="1457664688595" finish="1457664691736" instanceAlias="Home Page" pageResult="//@pageResults.0">
+          <screenshots screenshot="//@screenshots.24"/>
+          <screenshots type="DURING" comment="Theme drop-down" screenshot="//@screenshots.26"/>
+          <screenshots type="DURING" comment="Theme selected" screenshot="//@screenshots.27"/>
+          <screenshots type="AFTER" screenshot="//@screenshots.25"/>
+          <children xsi:type="org.nasdanika.webtest.model:InitializationResult" qualifiedName="class org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl" title="Task manager home page impl :: init" operationName="TaskManagerHomePageImpl::init" start="1457664690951" finish="1457664691346" pageResult="//@pageResults.0">
+            <screenshots screenshot="//@screenshots.28"/>
+            <screenshots type="AFTER" screenshot="//@screenshots.25"/>
+          </children>
+          <arguments value="Sandstone" type="org.nasdanika.taskmanager.ui.driver.pages.Theme"/>
+          <arguments value="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl@67001148" type="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl"/>
+        </children>
+        <arguments value="Sandstone" type="org.nasdanika.taskmanager.ui.driver.pages.Theme"/>
+      </children>
+      <children xsi:type="org.nasdanika.webtest.model:ActorMethodResult" qualifiedName="public abstract void org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.setTheme(org.nasdanika.taskmanager.ui.driver.pages.Theme)" title="Set theme" operationName="setTheme" start="1457664692526" finish="1457664694992" instanceAlias="T4" actorResult="//@actorResults.0">
+        <screenshots screenshot="//@screenshots.25"/>
+        <screenshots type="AFTER" screenshot="//@screenshots.22"/>
+        <children xsi:type="org.nasdanika.webtest.model:PageMethodResult" qualifiedName="public abstract org.nasdanika.taskmanager.ui.driver.pages.TaskManagerHomePage org.nasdanika.taskmanager.ui.driver.pages.TaskManagerHomePage.setTheme(org.nasdanika.taskmanager.ui.driver.pages.Theme)" title="Set theme" operationName="setTheme" start="1457664692916" finish="1457664694595" instanceAlias="Home Page" pageResult="//@pageResults.0">
+          <screenshots screenshot="//@screenshots.25"/>
+          <screenshots type="DURING" comment="Theme drop-down" screenshot="//@screenshots.29"/>
+          <screenshots type="DURING" comment="Theme selected" screenshot="//@screenshots.30"/>
+          <screenshots type="AFTER" screenshot="//@screenshots.22"/>
+          <children xsi:type="org.nasdanika.webtest.model:InitializationResult" qualifiedName="class org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl" title="Task manager home page impl :: init" operationName="TaskManagerHomePageImpl::init" start="1457664693854" finish="1457664694221" pageResult="//@pageResults.0">
+            <screenshots screenshot="//@screenshots.31"/>
+            <screenshots type="AFTER" screenshot="//@screenshots.32"/>
+          </children>
+          <arguments value="Bootstrap" type="org.nasdanika.taskmanager.ui.driver.pages.Theme"/>
+          <arguments value="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl@4ad3d266" type="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl"/>
+        </children>
+        <arguments value="Bootstrap" type="org.nasdanika.taskmanager.ui.driver.pages.Theme"/>
+      </children>
+    </methodResults>
+    <stats key="Pass" value="5"/>
+    <stats key="Fail" value="0"/>
+    <stats key="Error" value="0"/>
+    <stats key="Pending" value="0"/>
+  </testResults>
+  <pageResults qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.TaskManagerHomePage" title="Task Manager Home Page" results="//@testResults.0/@methodResults.0/@children.0 //@testResults.0/@methodResults.0/@children.1/@children.0 //@testResults.0/@methodResults.0/@children.1/@children.3/@children.0 //@testResults.0/@methodResults.0/@children.1/@children.4 //@testResults.0/@methodResults.1/@children.0 //@testResults.0/@methodResults.1/@children.1/@children.0 //@testResults.0/@methodResults.1/@children.1/@children.1 //@testResults.0/@methodResults.2/@children.0 //@testResults.0/@methodResults.2/@children.1/@children.0 //@testResults.0/@methodResults.2/@children.1/@children.2 //@testResults.0/@methodResults.3/@children.0 //@testResults.0/@methodResults.3/@children.1/@children.0 //@testResults.0/@methodResults.3/@children.1/@children.1 //@testResults.0/@methodResults.4/@children.0 //@testResults.0/@methodResults.4/@children.1/@children.0 //@testResults.0/@methodResults.4/@children.1/@children.0/@children.0 //@testResults.0/@methodResults.4/@children.2/@children.0 //@testResults.0/@methodResults.4/@children.2/@children.0/@children.0">
+    <description contentType="text">
+      <value>Page class for testing Task Manager</value>
+    </description>
+    <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl.newTaskButton" title="New task button">
+      <locators how="CSS" using="#content-panel > button"/>
+    </webElements>
+    <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl.taskTableBody" title="Task table body">
+      <locators how="CSS" using="#content-panel > table > tbody"/>
+    </webElements>
+    <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl.themeDropDown" title="Theme drop down">
+      <locators how="CSS" using="body > div > div.panel-heading > h3 > div > span > ul"/>
+    </webElements>
+    <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskManagerHomePageImpl.themeToggle" title="Theme toggle">
+      <locators how="CSS" using="body > div > div.panel-heading > h3 > div > span > span"/>
+    </webElements>
+  </pageResults>
+  <pageResults qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.TaskEditDialog" title="Task edit dialog" results="//@testResults.0/@methodResults.0/@children.1/@children.0/@children.0 //@testResults.0/@methodResults.0/@children.1/@children.1 //@testResults.0/@methodResults.0/@children.1/@children.2 //@testResults.0/@methodResults.0/@children.1/@children.3 //@testResults.0/@methodResults.2/@children.1/@children.1">
+    <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskEditDialogImpl.cancel" title="Cancel">
+      <locators how="CSS" using="#task-modal > div > div > div.modal-footer > button:nth-child(2)"/>
+    </webElements>
+    <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskEditDialogImpl.description" title="Description">
+      <locators how="CSS" using="#task-modal > div > div > div.modal-body > form > div:nth-child(1) > textarea"/>
+    </webElements>
+    <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskEditDialogImpl.status" title="Status">
+      <locators how="CSS" using="#task-modal > div > div > div.modal-body > form > div:nth-child(2) > select"/>
+    </webElements>
+    <webElements qualifiedName="org.nasdanika.taskmanager.ui.driver.pages.impl.TaskEditDialogImpl.submit" title="Submit">
+      <locators how="CSS" using="#task-modal > div > div > div.modal-footer > button:nth-child(1)"/>
+    </webElements>
+  </pageResults>
+  <actorResults qualifiedName="org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor" title="Task manager actor" results="//@testResults.0/@methodResults.0/@children.1 //@testResults.0/@methodResults.1/@children.1 //@testResults.0/@methodResults.2/@children.1 //@testResults.0/@methodResults.3/@children.1 //@testResults.0/@methodResults.4/@children.1 //@testResults.0/@methodResults.4/@children.2">
+    <description contentType="text">
+      <value>Task Manager UI Tests Actor</value>
+    </description>
+    <coverage qualifiedName="public abstract int org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.createTask(java.lang.String,org.nasdanika.taskmanager.ui.driver.pages.TaskStatus)" title="Create task" invocations="1"/>
+    <coverage qualifiedName="public abstract void org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.deleteTask(int)" title="Delete task" invocations="1"/>
+    <coverage qualifiedName="public abstract void org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.setTheme(org.nasdanika.taskmanager.ui.driver.pages.Theme)" title="Set theme" invocations="2"/>
+    <coverage qualifiedName="public abstract void org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.setTaskStatus(int,org.nasdanika.taskmanager.ui.driver.pages.TaskStatus)" title="Set task status" invocations="1"/>
+    <coverage qualifiedName="public abstract void org.nasdanika.taskmanager.ui.driver.actors.TaskManagerActor.updateTask(int,java.lang.String,org.nasdanika.taskmanager.ui.driver.pages.TaskStatus)" title="Update task" invocations="1"/>
+  </actorResults>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_0.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.0/@screenshots.0 //@testResults.0/@methodResults.0/@children.1/@screenshots.1 //@testResults.0/@methodResults.0/@children.1/@children.3/@screenshots.1 //@testResults.0/@methodResults.0/@children.1/@children.4/@screenshots.0 //@testResults.0/@methodResults.0/@children.1/@children.4/@screenshots.1"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_1.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.0/@children.0/@screenshots.0 //@testResults.0/@methodResults.0/@children.0/@screenshots.1 //@testResults.0/@methodResults.0/@children.1/@screenshots.0 //@testResults.0/@methodResults.0/@children.1/@children.0/@screenshots.0"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_2.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.0/@children.1/@children.0/@screenshots.1 //@testResults.0/@methodResults.0/@children.1/@children.0/@children.0/@screenshots.0 //@testResults.0/@methodResults.0/@children.1/@children.0/@children.0/@screenshots.1 //@testResults.0/@methodResults.0/@children.1/@children.1/@screenshots.0"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_3.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.0/@children.1/@children.1/@screenshots.1"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_4.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.0/@children.1/@children.2/@screenshots.0"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_5.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.0/@children.1/@children.2/@screenshots.1 //@testResults.0/@methodResults.0/@children.1/@children.3/@screenshots.0"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_6.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.0/@children.1/@children.3/@children.0/@screenshots.0"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_7.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.0/@children.1/@children.3/@children.0/@screenshots.1"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_8.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.1/@screenshots.0 //@testResults.0/@methodResults.1/@children.1/@screenshots.1"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_9.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.1/@children.0/@screenshots.0 //@testResults.0/@methodResults.1/@children.0/@screenshots.1 //@testResults.0/@methodResults.1/@children.1/@screenshots.0 //@testResults.0/@methodResults.1/@children.1/@children.0/@screenshots.0 //@testResults.0/@methodResults.1/@children.1/@children.0/@screenshots.1"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_a.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.1/@children.1/@children.1/@screenshots.0"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_b.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.1/@children.1/@children.1/@screenshots.1"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_c.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.2/@screenshots.0 //@testResults.0/@methodResults.2/@children.1/@screenshots.1"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_d.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.2/@children.0/@screenshots.0 //@testResults.0/@methodResults.2/@children.0/@screenshots.1 //@testResults.0/@methodResults.2/@children.1/@screenshots.0 //@testResults.0/@methodResults.2/@children.1/@children.0/@screenshots.0 //@testResults.0/@methodResults.2/@children.1/@children.0/@screenshots.1"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_e.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.2/@children.1/@children.1/@screenshots.0 //@testResults.0/@methodResults.2/@children.1/@children.1/@screenshots.1"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_f.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.2/@children.1/@children.2/@screenshots.0"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_g.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.2/@children.1/@children.2/@screenshots.1"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_h.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.3/@screenshots.0 //@testResults.0/@methodResults.3/@children.1/@screenshots.2"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_i.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.3/@children.0/@screenshots.0 //@testResults.0/@methodResults.3/@children.0/@screenshots.1 //@testResults.0/@methodResults.3/@children.1/@screenshots.0 //@testResults.0/@methodResults.3/@children.1/@children.0/@screenshots.0 //@testResults.0/@methodResults.3/@children.1/@children.0/@screenshots.1"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_j.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.3/@children.1/@screenshots.1"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_k.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.3/@children.1/@children.1/@screenshots.0"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_l.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.3/@children.1/@children.1/@screenshots.1"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_m.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.4/@screenshots.0 //@testResults.0/@methodResults.4/@children.2/@screenshots.1 //@testResults.0/@methodResults.4/@children.2/@children.0/@screenshots.3"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_n.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.4/@children.0/@screenshots.0"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_o.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.4/@children.0/@screenshots.1 //@testResults.0/@methodResults.4/@children.1/@screenshots.0 //@testResults.0/@methodResults.4/@children.1/@children.0/@screenshots.0"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_p.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.4/@children.1/@screenshots.1 //@testResults.0/@methodResults.4/@children.1/@children.0/@screenshots.3 //@testResults.0/@methodResults.4/@children.1/@children.0/@children.0/@screenshots.1 //@testResults.0/@methodResults.4/@children.2/@screenshots.0 //@testResults.0/@methodResults.4/@children.2/@children.0/@screenshots.0"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_q.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.4/@children.1/@children.0/@screenshots.1"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_r.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.4/@children.1/@children.0/@screenshots.2"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_s.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.4/@children.1/@children.0/@children.0/@screenshots.0"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_t.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.4/@children.2/@children.0/@screenshots.1"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_u.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.4/@children.2/@children.0/@screenshots.2"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_v.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.4/@children.2/@children.0/@children.0/@screenshots.0"/>
+  <screenshots location="TaskManagerTestsScreenshots/screenshot_w.png" height="938" width="935" contentType="image/png" entries="//@testResults.0/@methodResults.4/@children.2/@children.0/@children.0/@screenshots.1"/>
+</org.nasdanika.webtest.model:TestSession>
